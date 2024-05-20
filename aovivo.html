@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canais Apollo | Home</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #800080, #008000, #000000, #FF0000, #0000FF);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @keyframes gradientBG {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        header, nav, footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .video-container {
+            display: none;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function toggleVideo(videoId) {
+            var videoContainer = document.getElementById(videoId);
+            if (videoContainer.style.display === 'none') {
+                videoContainer.style.display = 'block';
+            } else {
+                videoContainer.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Canais Apollo</h1>
+    <p>Seu Portal de Canais ao Vivo</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#abertos">Abertos</a></li>
+        <li><a href="#hbo">HBO</a></li>
+        <li><a href="#megapix">Megapix</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#warner">Warner Bros</a></li>
+        <li><a href="#discovery">Discovery</a></li>
+        <li><a href="#telecine">Telecine</a></li>
+        <li><a href="#multishow">Multishow</a></li>
+        <li><a href="#space">Multishow</a></li>
+        <li><a href="#tnt">Multishow</a></li>
+    </ul>
+</nav>
+
+<section id="abertos">
+    <h2>Abertos</h2>
+    <p>Lista de canais abertos disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerSBT')">Assistir SBT</button>
+    <div id="videoContainerSBT" class="video-container">
+        <iframe src="https://embedflix.online/tv/sbt" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerGlobo')">Assistir Globo</button>
+    <div id="videoContainerGlobo" class="video-container">
+        <iframe src="https://embedflix.online/tv/globo-sp" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerBand')">Assistir Band</button>
+    <div id="videoContainerBand" class="video-container">
+        <iframe src="https://embedflix.online/tv/band-tv-sp" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerRecord')">Assistir Record</button>
+    <div id="videoContainerRecord" class="video-container">
+        <iframe src="https://embedflix.online/tv/record-tv-sp" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="hbo">
+    <h2>HBO</h2>
+    <p>Lista de canais HBO disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO)">HBO</button>
+    <div id="videoContainerHBO" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO-Family')">HBO Family</button>
+    <div id="videoContainerHBO-Family" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo-family" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO-Plus')">HBO Plus</button>
+    <div id="videoContainerHBO-Plus" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo-plus" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO-Xtreme')">HBO Xtreme</button>
+    <div id="videoContainerHBO-Xtreme" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo-xtreme" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO-Pop')">HBO Pop</button>
+    <div id="videoContainerHBO-Pop" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo-pop" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHBO2')">HBO 2</button>
+    <div id="videoContainerHBO2" class="video-container">
+        <iframe src="https://embedflix.online/tv/hbo-2" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="megapix">
+    <h2>Megapix</h2>
+    <p>Lista de canais Megapix disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerMegapix')">Megapix</button>
+    <div id="videoContainerMegapix" class="video-container">
+        <iframe src="https://embedflix.online/tv/megapix" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="history">
+    <h2>History</h2>
+    <p>Lista de canais History disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerHistory-channel')">History channel</button>
+    <div id="videoContainerHistory-channel" class="video-container">
+        <iframe src="https://embedflix.online/tv/history-channel" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerHistory2')">History 2</button>
+    <div id="videoContainerHistory2" class="video-container">
+        <iframe src="https://embedflix.online/tv/h2" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="warner">
+    <h2>Warner Bros</h2>
+    <p>Lista de canais Warner Bros disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerWarner')">Warner Channel</button>
+    <div id="videoContainerWarner" class="video-container">
+        <iframe src="https://embedflix.online/tv/warner-channel" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="discovery">
+    <h2>Discovery</h2>
+    <p>Lista de canais Discovery disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerDiscovery')">Discovery Channel</button>
+    <div id="videoContainerDiscovery" class="video-container">
+        <iframe src="https://embedflix.online/tv/discovery-channel-hd" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerDiscovery-Turbo')">Discovery Turbo</button>
+    <div id="videoContainerDiscovery-Turbo" class="video-container">
+        <iframe src="https://embedflix.online/tv/discovery-turbo" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="telecine">
+    <h2>Telecine</h2>
+    <p>Lista de canais Telecine disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerTelecine-Fun')">Telecine Fun</button>
+    <div id="videoContainerTelecine-Fun" class="video-container">
+        <iframe src="https://embedflix.online/tv/telecine-fun-hd" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerTelecine-Pipoca')">Telecine Pipoca</button>
+    <div id="videoContainerTelecine-Pipoca" class="video-container">
+        <iframe src="https://embedflix.online/tv/telecine-pipoca-hd" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerTelecine-Action')">Telecine Action</button>
+    <div id="videoContainerTelecine-Action" class="video-container">
+        <iframe src="https://embedflix.online/tv/telecine-action-hd" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerTelecine-Cult')">Telecine Cult</button>
+    <div id="videoContainerTelecine-Cult" class="video-container">
+        <iframe src="https://embedflix.online/tv/telecine-cult" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+    <button class="btn" onclick="toggleVideo('videoContainerTelecine-Touch')">Telecine Touch</button>
+    <div id="videoContainerTelecine-Touch" class="video-container">
+        <iframe src="https://embedflix.online/tv/telecine-touch" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="multishow">
+    <h2>Multishow</h2>
+    <p>Lista de canais Multishow disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerMultishow')">Multishow</button>
+    <div id="videoContainerMultishow" class="video-container">
+        <iframe src="https://embedflix.online/tv/multishow" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="space">
+    <h2>Space</h2>
+    <p>Lista de canais Space disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerSpace')">Space</button>
+    <div id="videoContainerSpace" class="video-container">
+        <iframe src="https://embedflix.online/tv/space" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+<section id="tnt">
+    <h2>Tnt</h2>
+    <p>Lista de canais Tnt disponíveis.</p>
+    <button class="btn" onclick="toggleVideo('videoContainerTnt')">Tnt</button>
+    <div id="videoContainerTnt" class="video-container">
+        <iframe src="https://embedflix.online/tv/tnt" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+    </div>
+</section>
+
+</body>
+</html>
